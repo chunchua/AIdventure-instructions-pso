@@ -241,6 +241,10 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="#ff9a1f" stroke-width="2"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
         <div><div class="label">Location</div><div class="big">TAB Club de Specialist (CdS)</div></div>
       </div>
+      <div class="card reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#ff9a1f" stroke-width="2"><path d="M8 3 4 6l2 4 2-1v12h8V9l2 1 2-4-4-3a4 4 0 0 1-8 0z"/></svg>
+        <div><div class="label">Attire</div><div class="big">No. 4 Uniform / Office Wear</div></div>
+      </div>
     </div>
   </section>
 
@@ -256,7 +260,8 @@
         <li class="reveal" data-s="1000" data-e="1045"><time>1000H<small>to 1045H</small></time><span class="dot"></span><span class="what">Drafting of Emails and Reports with M365 Copilot</span></li>
         <li class="reveal brk" data-s="1045" data-e="1055"><time>1045H<small>to 1055H</small></time><span class="dot"></span><span class="what">Break ☕</span></li>
         <li class="reveal" data-s="1055" data-e="1140"><time>1055H<small>to 1140H</small></time><span class="dot"></span><span class="what">Drafting of Presentation Slides and Image Generation with M365 Copilot</span></li>
-        <li class="reveal" data-s="1140" data-e="1200"><time>1140H<small>to 1200H</small></time><span class="dot"></span><span class="what">Run-Through of AI Assistants with AI Bot and M365 Copilot Studio</span></li>
+        <li class="reveal" data-s="1140" data-e="1155"><time>1140H<small>to 1155H</small></time><span class="dot"></span><span class="what">Run-Through of AI Assistants with AI Bot and M365 Copilot Studio</span></li>
+        <li class="reveal" data-s="1155" data-e="1200"><time>1155H<small>to 1200H</small></time><span class="dot"></span><span class="what">Commander's Closing Address</span></li>
         <li class="reveal brk" data-s="1200" data-e="1300"><time>1200H<small>to 1300H</small></time><span class="dot"></span><span class="what">Buffet Lunch 🍽️<small class="sub">Provided for AI Masterclass participants</small></span></li>
       </ol>
 
@@ -273,6 +278,9 @@
           <p class="note">Your phone is your game controller. Be ready to play!</p>
         </div>
       </div>
+      <ol class="tl" id="tl2">
+        <li class="reveal" data-s="1455" data-e="1500"><time>1455H<small>to 1500H</small></time><span class="dot"></span><span class="what">Commander's Closing Address</span></li>
+      </ol>
     </div>
   </section>
 
@@ -366,7 +374,7 @@
 
     // programme: highlight the session in progress on the day
     const today = days === 0;
-    document.querySelectorAll('#tl li, #semRow').forEach((li) => {
+    document.querySelectorAll('#tl li, #tl2 li, #semRow').forEach((li) => {
       const on = today && now.hhmm >= +li.dataset.s && now.hhmm < +li.dataset.e, done = today && now.hhmm >= +li.dataset.e;
       li.classList.toggle('now', on); li.classList.toggle('done', done && li.tagName === 'LI');
       const w = li.querySelector('.what');
